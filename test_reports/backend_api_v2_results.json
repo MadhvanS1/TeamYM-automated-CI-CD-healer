@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-03-14T10:01:52.407809",
+  "summary": {
+    "total_tests": 12,
+    "passed": 10,
+    "failed": 2,
+    "success_rate": 83.33333333333334,
+    "duration": 114.27701210975647
+  },
+  "test_results": [
+    {
+      "test_name": "API Root",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "User Registration",
+      "success": false,
+      "details": "Status: 200, Response: {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0ZGZjNTMzZC1lZGVmLTRkMjMtOTZhMC01Y2JkOGI1ZGNjOWUiLCJlbWFpbCI6InFhQHRlc3QuY29tIiwiZXhwIjoxNzc0MDg3MjA5fQ.x4tHoJviRKQHqtR6NP7Tq5yanbMeImKG_kbTzVDq1U0', 'user': {'id': '4dfc533d-edef-4d23-96a0-5cbd8b5dcc9e', 'email': 'qa@test.com', 'name': 'QAUser'}}",
+      "response_data": null
+    },
+    {
+      "test_name": "User Login",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "GET /api/auth/me",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "POST /api/repos (add repo)",
+      "success": false,
+      "details": "Status: 200, Response: {'id': '2c23a2fe-7204-4328-a689-5df45fd90fd6', 'user_id': '4dfc533d-edef-4d23-96a0-5cbd8b5dcc9e', 'url': 'https://github.com/pallets/flask', 'owner': 'pallets', 'name': 'flask', 'full_name': 'pallets/flask', 'language': None, 'description': None, 'default_branch': 'main', 'scan_status': 'pending', 'scan_progress': None, 'issues_found': 0, 'issues_fixed': 0, 'prs_created': 0, 'last_scanned': None, 'created_at': '2026-03-14T10:01:01.520558+00:00'}",
+      "response_data": null
+    },
+    {
+      "test_name": "GET /api/repos",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "GET /api/issues/:id",
+      "success": true,
+      "details": "No issues to test (skipped)",
+      "response_data": null
+    },
+    {
+      "test_name": "POST /api/issues/:id/fix",
+      "success": true,
+      "details": "No issues to test (skipped)",
+      "response_data": null
+    },
+    {
+      "test_name": "GET /api/prs",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "GET /api/config",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "PUT /api/config",
+      "success": true,
+      "details": "",
+      "response_data": null
+    },
+    {
+      "test_name": "GET /api/dashboard/stats",
+      "success": true,
+      "details": "",
+      "response_data": null
+    }
+  ]
+}

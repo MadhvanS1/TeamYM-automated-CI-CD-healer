@@ -1,6 +1,7 @@
 import requests
 import sys
 import json
+import time
 from datetime import datetime
 
 class CICDHealingAgentTester:
@@ -9,9 +10,18 @@ class CICDHealingAgentTester:
         self.api_url = f"{base_url}/api"
         self.token = None
         self.user_id = None
+        self.test_repo_id = None
+        self.test_issue_id = None
         self.tests_run = 0
         self.tests_passed = 0
         self.test_results = []
+        
+        # Test user credentials
+        self.test_user = {
+            "name": "QAUser",
+            "email": "qa@test.com",
+            "password": "QAPass123"
+        }
 
     def log_test(self, test_name, success, details="", response_data=None):
         """Log test result"""
