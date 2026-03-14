@@ -1,0 +1,164 @@
+{
+  "identity": {
+    "persona": "E1: The Anti-AI Designer - Tactical Command Variant",
+    "mission": "Create a professional, high-density CI/CD dashboard that feels like a mission control center. Prioritize information density, precision, and clarity over decoration.",
+    "principles": [
+      "Fusion over Imitation: Mix 'Bloomberg Terminal' density with 'Sci-Fi HUD' aesthetics.",
+      "Emotion First: The user should feel powerful and in control.",
+      "Content is King: Data is the art. Charts and logs are the heroes.",
+      "Zoom In: Use micro-interactions to highlight specific data points.",
+      "Negative Space: Use it strategically to separate high-density clusters."
+    ],
+    "anti_patterns": [
+      "No 'SaaS Blue' primary buttons.",
+      "No generic 'Inter' for headings.",
+      "No centered layouts for dashboards.",
+      "No gradient overload.",
+      "No 'soft' shadows without definition."
+    ]
+  },
+  "typography": {
+    "fonts": {
+      "headings": {
+        "family": "Chivo, sans-serif",
+        "usage": "Headings, KPIs, Modal Titles",
+        "weights": ["700", "900"],
+        "tracking": "tight"
+      },
+      "body": {
+        "family": "Inter, sans-serif",
+        "usage": "General UI text, labels, buttons",
+        "weights": ["400", "500"],
+        "tracking": "normal"
+      },
+      "mono": {
+        "family": "JetBrains Mono, monospace",
+        "usage": "Logs, Code Blocks, IDs, SHA hashes, Timestamps",
+        "weights": ["400", "500"],
+        "tracking": "tight"
+      }
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-black tracking-tighter",
+      "h2": "text-2xl md:text-3xl font-bold tracking-tight",
+      "h3": "text-xl font-bold tracking-tight",
+      "body": "text-sm leading-relaxed",
+      "small": "text-xs text-muted-foreground",
+      "mono_base": "text-sm font-mono",
+      "mono_small": "text-xs font-mono"
+    }
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": {
+        "default": "#09090B",
+        "card": "#121214",
+        "overlay": "#18181B",
+        "sidebar": "#050505"
+      },
+      "foreground": {
+        "default": "#FAFAFA",
+        "muted": "#A1A1AA",
+        "dark": "#71717A"
+      },
+      "primary": {
+        "default": "#FAFAFA",
+        "foreground": "#09090B"
+      },
+      "accent": {
+        "success": "#22C55E",
+        "error": "#EF4444",
+        "warning": "#F59E0B",
+        "info": "#3B82F6",
+        "ai_magic": "#D946EF",
+        "healing": "#8B5CF6"
+      },
+      "border": {
+        "default": "#27272A",
+        "active": "#3F3F46",
+        "highlight": "#52525B"
+      }
+    },
+    "gradients": {
+      "tracing_beam": "linear-gradient(90deg, transparent, #D946EF, transparent)",
+      "glass": "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%)"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid Mode B (High Density)",
+    "container": {
+      "padding": "p-4 md:p-6 lg:p-8",
+      "gap": "gap-4 md:gap-6"
+    },
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-12 gap-4",
+    "card_styles": "rounded-lg border border-border bg-card/50 backdrop-blur-sm",
+    "sidebar": "w-64 border-r border-border bg-sidebar hidden md:flex flex-col"
+  },
+  "components": {
+    "buttons": {
+      "default": "h-9 px-4 py-2 rounded-md font-medium text-sm transition-all active:scale-95",
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_10px_rgba(255,255,255,0.1)]",
+      "ghost": "hover:bg-accent hover:text-accent-foreground",
+      "destructive": "bg-destructive text-destructive-foreground hover:bg-destructive/90"
+    },
+    "cards": {
+      "base": "bg-card border border-border shadow-sm",
+      "hover_effect": "hover:border-primary/50 transition-colors duration-300"
+    },
+    "inputs": {
+      "base": "h-9 rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "badges": {
+      "base": "inline-flex items-center rounded-sm border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+      "status_success": "border-transparent bg-green-500/15 text-green-500 hover:bg-green-500/25",
+      "status_error": "border-transparent bg-red-500/15 text-red-500 hover:bg-red-500/25",
+      "status_warning": "border-transparent bg-amber-500/15 text-amber-500 hover:bg-amber-500/25",
+      "status_healing": "border-transparent bg-purple-500/15 text-purple-500 hover:bg-purple-500/25 animate-pulse"
+    }
+  },
+  "visual_enhancements": {
+    "glassmorphism": "backdrop-blur-xl bg-background/60 border-b border-white/5",
+    "tracing_beam": "absolute inset-0 pointer-events-none rounded-lg border border-transparent [mask-image:linear-gradient(white,white)] before:absolute before:inset-0 before:bg-[conic-gradient(from_var(--angle),transparent_70%,#D946EF)] before:animate-[spin_4s_linear_infinite]",
+    "scanlines": "bg-[linear-gradient(rgba(18,18,18,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_4px,3px_100%]"
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "stroke-[1.5px]",
+    "usage": "Use consistent stroke width. Animate icons on hover (e.g., refresh spin, arrow move)."
+  },
+  "motion": {
+    "library": "framer-motion",
+    "transitions": {
+      "default": { "type": "spring", "stiffness": 300, "damping": 30 },
+      "slow": { "duration": 0.5, "ease": "easeInOut" }
+    },
+    "variants": {
+      "fadeIn": { "initial": { "opacity": 0 }, "animate": { "opacity": 1 } },
+      "slideUp": { "initial": { "y": 20, "opacity": 0 }, "animate": { "y": 0, "opacity": 1 } },
+      "scaleIn": { "initial": { "scale": 0.95, "opacity": 0 }, "animate": { "scale": 1, "opacity": 1 } }
+    }
+  },
+  "image_urls": {
+    "hero_background": "https://images.unsplash.com/photo-1764258560300-2346b28b4e7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBjeWJlciUyMG5ldHdvcmslMjB0ZWNobm9sb2d5JTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzM0Nzk3MzR8MA&ixlib=rb-4.1.0&q=85",
+    "code_texture": "https://images.unsplash.com/photo-1759661881353-5b9cc55e1cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGRhcmslMjBjeWJlciUyMG5ldHdvcmslMjB0ZWNobm9sb2d5JTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzM0Nzk3MzR8MA&ixlib=rb-4.1.0&q=85",
+    "digital_pattern": "https://images.unsplash.com/photo-1761599821310-da0d6356b4f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGRhcmslMjBjeWJlciUyMG5ldHdvcmslMjB0ZWNobm9sb2d5JTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzM0Nzk3MzR8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "universal_guidelines": [
+    "NEVER use generic 'SaaS Blue' for primary actions. Use Monochrome (White/Black) or the specific 'AI Purple' for magic actions.",
+    "Data Density: Don't be afraid of small text (12px/13px) for secondary data. This is a pro tool.",
+    "Borders: Use 1px borders with very low opacity (10-15%) to define structure without visual clutter.",
+    "Feedback: Every action (healing, re-running) must have immediate visual feedback (toast + optimistic UI update).",
+    "Code Viewer: Must look like VS Code. Dark theme, syntax highlighting, line numbers.",
+    "Do NOT center the main dashboard container. It should fill the screen width.",
+    "Use 'sonner' for all toast notifications.",
+    "Add 'data-testid' to all interactive elements."
+  ],
+  "instructions_to_main_agent": {
+    "auth_page": "Use 'hero_background' as the full-screen background with a heavy blur or overlay. Center the login card with a glassmorphism effect.",
+    "dashboard": "Implement the 'Bento Grid Mode B'. Top row: Stats. Main area: Recent Runs (Table) and Failure Analysis (Split view). Right column: Activity Feed.",
+    "pipeline_run_table": "Use a dense table layout. Status badges should be small and pill-shaped. Click row to expand details.",
+    "failure_analysis": "This is the core feature. Split screen: Left side logs (Monospace), Right side AI Analysis (Markdown rendered).",
+    "healing_timeline": "Vertical timeline component showing steps: 'Detected Failure' -> 'Analyzing Logs' -> 'Generating Fix' -> 'PR Created'. Use icons for each step."
+  }
+}
