@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/App";
 import { motion } from "framer-motion";
 import { Shield, ArrowRight, Eye, EyeOff } from "lucide-react";
 import { toast } from "sonner";
 
 export default function LoginPage() {
-  const { login, register } = useAuth();
+  const { login, register, user } = useAuth();
+  const navigate = useNavigate();
   const [isRegister, setIsRegister] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      navigate("/", { replace: true });
+    }
+  }, [user, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,6 +32,7 @@ export default function LoginPage() {
         await login(email, password);
         toast.success("Welcome back");
       }
+      navigate("/", { replace: true });
     } catch (err) {
       toast.error(err.response?.data?.detail || "Authentication failed");
     } finally {
